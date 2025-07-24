@@ -2,6 +2,8 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
 import math
+import numpy as np
+import cv2
 
 
 class CalculateNode(Node):
@@ -28,13 +30,23 @@ class CalculateNode(Node):
         self.person_pub = self.create_publisher(Float32MultiArray, '/person/gps', 10)
 
         self.drone_info = None   # [lat, lon, alt, roll, pitch, yaw]
-        self.yolo_bbox = None   # [x1, y1, x2, y2, ...]
+        self.yolo_bbox = None    # [x1, y1, x2, y2, ...]
 
-        # 相機參數 (需依實際攝影機調整)
-        self.image_width = 640
-        self.image_height = 480
-        self.fov_x = 155.1 * math.pi / 180  # 60度水平視角
-        self.fov_y = 147.2 * math.pi / 180  # 45度垂直視角
+        # 相機內參矩陣 (需標定得到)
+        self.fx = 244.61769346  
+        self.fy = 325.31942852
+        self.cx = 329.07635483  # assume image width=640
+        self.cy = 249.59847313  # assume image height=480
+        self.K = np.array([[self.fx, 0, self.cx],
+                           [0, self.fy, self.cy],
+                           [0, 0, 1]], dtype=np.float64)
+
+        # 相機畸變參數 (k1, k2, p1, p2, k3)
+        self.dist_coeffs = np.array([-0.24119534, 0.05743331, 0.00039577, 0.00080172, -0.00581896], dtype=np.float64)
+
+        # 相機與機體的姿態 (假設相機朝下)
+        self.R_cam2body = self.get_camera_rotation_matrix(tilt_deg=45.0)
+        
 
     def gps_callback(self, msg):
         self.drone_info = msg.data  # [lat, lon, alt, roll, pitch, yaw]
@@ -50,15 +62,14 @@ class CalculateNode(Node):
         if len(self.yolo_bbox) < 4:
             return  # 沒偵測到任何框
 
-        # 取第一個框框
         x1, y1, x2, y2 = self.yolo_bbox[0:4]
         cx = (x1 + x2) / 2
         cy = (y1 + y2) / 2
 
         lat, lon, alt, roll, pitch, yaw = self.drone_info
 
-        # 計算相對地面偏移
-        dx, dy = self.pixel_to_ground_offset(cx, cy, alt, yaw)
+        # 計算像素點對應的地面偏移
+        dx, dy = self.pixel_to_ground_offset(cx, cy, alt, roll, pitch, yaw)
 
         # 計算絕對 GPS 座標
         person_lat, person_lon = self.offset_to_gps(lat, lon, dx, dy)
@@ -70,24 +81,27 @@ class CalculateNode(Node):
         msg.data = [person_lat, person_lon]
         self.person_pub.publish(msg)
 
-    def pixel_to_ground_offset(self, cx, cy, altitude, yaw):
+    def pixel_to_ground_offset(self, u, v, altitude, roll, pitch, yaw):
         """
-        將像素座標轉換為無人機座標系下的 (dx, dy)，單位: 公尺
+        使用相機內參計算像素 (u,v) 在地面上的偏移量 (dx, dy) 單位: m
         """
-        # 像素 -> 正規化 [-1,1]
-        norm_x = (cx - self.image_width / 2) / (self.image_width / 2)
-        norm_y = (cy - self.image_height / 2) / (self.image_height / 2)
+        # Step 1: 先做畸變矯正
+        pts = np.array([[[u, v]]], dtype=np.float64)
+        undistorted = cv2.undistortPoints(pts, self.K, self.dist_coeffs)
+        x_c, y_c = undistorted[0, 0, 0], undistorted[0, 0, 1]
 
-        # 估算地面偏移 (簡化為平地假設)
-        dx = norm_x * altitude * math.tan(self.fov_x / 2)
-        dy = norm_y * altitude * math.tan(self.fov_y / 2)
+        # Step 2: 相機座標射線 (歸一化)
+        ray_cam = np.array([x_c, y_c, 1.0])
 
-        # 考慮 yaw 旋轉
-        yaw_rad = math.radians(yaw)
-        rotated_dx = dx * math.cos(yaw_rad) - dy * math.sin(yaw_rad)
-        rotated_dy = dx * math.sin(yaw_rad) + dy * math.cos(yaw_rad)
+        # Step 3: 將相機射線轉到世界座標
+        R_body2world = self.rpy_to_matrix(roll, pitch, yaw)
+        ray_world = R_body2world @ (self.R_cam2body @ ray_cam)
 
-        return rotated_dx, rotated_dy
+        # Step 4: 計算與地面的交點
+        t = -altitude / ray_world[2]
+        dx = t * ray_world[0]
+        dy = t * ray_world[1]
+        return dx, dy
 
     def offset_to_gps(self, lat, lon, dx, dy):
         """
@@ -97,6 +111,25 @@ class CalculateNode(Node):
         new_lat = lat + (dy / R) * (180 / math.pi)
         new_lon = lon + (dx / (R * math.cos(math.radians(lat)))) * (180 / math.pi)
         return new_lat, new_lon
+
+    def rpy_to_matrix(self, roll, pitch, yaw):
+        """
+        將 roll, pitch, yaw (度) 轉換成旋轉矩陣
+        """
+        roll = math.radians(roll)
+        pitch = math.radians(pitch)
+        yaw = math.radians(yaw)
+
+        Rx = np.array([[1, 0, 0],
+                       [0, math.cos(roll), -math.sin(roll)],
+                       [0, math.sin(roll), math.cos(roll)]])
+        Ry = np.array([[math.cos(pitch), 0, math.sin(pitch)],
+                       [0, 1, 0],
+                       [-math.sin(pitch), 0, math.cos(pitch)]])
+        Rz = np.array([[math.cos(yaw), -math.sin(yaw), 0],
+                       [math.sin(yaw), math.cos(yaw), 0],
+                       [0, 0, 1]])
+        return Rz @ Ry @ Rx
 
 
 def main(args=None):
