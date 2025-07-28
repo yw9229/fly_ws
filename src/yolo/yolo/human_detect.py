@@ -12,7 +12,7 @@ class YoloNode(Node):
     def __init__(self):
         super().__init__('yolo_node')
 
-        self.model = YOLO('best.pt')  # 替換成你的模型
+        self.model = YOLO('./src/yolo/yolo/epoch187.pt')  # 替換成你的模型
         self.publisher_ = self.create_publisher(Float32MultiArray, '/yolo/bbox', 10)
         self.rgb_publisher_ = self.create_publisher(Image, '/yolo/rgb', 10)
         self.bridge = CvBridge()

@@ -1,0 +1,3 @@
+[console_scripts]
+gps = gps.gps_info:main
+

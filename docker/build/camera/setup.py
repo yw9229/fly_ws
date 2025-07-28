@@ -1,0 +1,1 @@
+/workspace/src/camera/setup.py

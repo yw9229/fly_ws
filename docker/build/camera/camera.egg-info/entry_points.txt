@@ -1,0 +1,3 @@
+[console_scripts]
+usb_camera = camera.usb_camera:main
+

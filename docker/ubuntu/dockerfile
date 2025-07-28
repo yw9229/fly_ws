@@ -86,17 +86,19 @@ RUN apt-get update && apt-get install -y ros-humble-desktop
 
 # Source ROS 2 setup script
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/work/.bashrc
+RUN echo "export ROS_DOMAIN_ID=10" >> /home/work/.bashrc
 
 # Install colcon
 RUN apt-get update && apt-get install -y python3-colcon-common-extensions
 
+RUN apt-get update && apt-get install -y ros-humble-vision-msgs
 
 # ================= Install Image Tool ======================
 RUN pip install numpy==1.26.4
 RUN pip install opencv-python==4.10.0.84
 
-# RUN apt-get remove -y python3-sympy
-# RUN pip install ultralytics
+RUN apt-get remove -y python3-sympy
+RUN pip install ultralytics
 
 # Extra features of opencv
 # pip3 install opencv-contrib-python
@@ -109,6 +111,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
+
+# ================= ByteTrack ======================
+RUN pip install cython_bbox==0.1.5
+RUN pip install lap==0.5.12
 
 # ================= Copy tmux Configuration ======================
 # Copy tmux.conf to root and work user directories

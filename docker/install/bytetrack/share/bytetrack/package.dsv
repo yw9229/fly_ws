@@ -1,0 +1,9 @@
+source;share/bytetrack/hook/pythonpath.ps1
+source;share/bytetrack/hook/pythonpath.dsv
+source;share/bytetrack/hook/pythonpath.sh
+source;share/bytetrack/hook/ament_prefix_path.ps1
+source;share/bytetrack/hook/ament_prefix_path.dsv
+source;share/bytetrack/hook/ament_prefix_path.sh
+source;../../build/bytetrack/share/bytetrack/hook/pythonpath_develop.ps1
+source;../../build/bytetrack/share/bytetrack/hook/pythonpath_develop.dsv
+source;../../build/bytetrack/share/bytetrack/hook/pythonpath_develop.sh

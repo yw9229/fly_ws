@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'calculate = calculate.calculate:main'
+            'calculate = calculate.calculate:main',
         ],
     },
 )

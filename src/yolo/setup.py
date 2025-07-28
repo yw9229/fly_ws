@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'yolo = yolo.human_detect:main'
+            'yolo = yolo.human_detect:main',
         ],
     },
 )
