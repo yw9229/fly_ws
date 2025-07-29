@@ -1,0 +1,24 @@
+[1.200s] Invoking command in '/workspace/src/yolo': PYTHONPATH=/workspace/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /workspace/build/yolo/build install --record /workspace/build/yolo/install.log --single-version-externally-managed install_data
+[1.396s] running egg_info
+[1.397s] writing ../../build/yolo/yolo.egg-info/PKG-INFO
+[1.397s] writing dependency_links to ../../build/yolo/yolo.egg-info/dependency_links.txt
+[1.398s] writing entry points to ../../build/yolo/yolo.egg-info/entry_points.txt
+[1.398s] writing requirements to ../../build/yolo/yolo.egg-info/requires.txt
+[1.398s] writing top-level names to ../../build/yolo/yolo.egg-info/top_level.txt
+[1.399s] reading manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.401s] writing manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.401s] running build
+[1.401s] running build_py
+[1.401s] copying yolo/human_detect.py -> /workspace/build/yolo/build/lib/yolo
+[1.401s] running install
+[1.401s] running install_lib
+[1.402s] copying /workspace/build/yolo/build/lib/yolo/human_detect.py -> /workspace/install/yolo/lib/python3.10/site-packages/yolo
+[1.402s] byte-compiling /workspace/install/yolo/lib/python3.10/site-packages/yolo/human_detect.py to human_detect.cpython-310.pyc
+[1.404s] running install_data
+[1.404s] running install_egg_info
+[1.406s] removing '/workspace/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info' (and everything under it)
+[1.406s] Copying ../../build/yolo/yolo.egg-info to /workspace/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info
+[1.406s] running install_scripts
+[1.431s] Installing yolo script to /workspace/install/yolo/lib/yolo
+[1.432s] writing list of installed files to '/workspace/build/yolo/install.log'
+[1.486s] Invoked command in '/workspace/src/yolo' returned '0': PYTHONPATH=/workspace/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /workspace/build/yolo/build install --record /workspace/build/yolo/install.log --single-version-externally-managed install_data

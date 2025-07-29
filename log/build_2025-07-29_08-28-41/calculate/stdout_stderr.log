@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/calculate/calculate.egg-info/PKG-INFO
+writing dependency_links to ../../build/calculate/calculate.egg-info/dependency_links.txt
+writing entry points to ../../build/calculate/calculate.egg-info/entry_points.txt
+writing requirements to ../../build/calculate/calculate.egg-info/requires.txt
+writing top-level names to ../../build/calculate/calculate.egg-info/top_level.txt
+reading manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+writing manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/workspace/install/calculate/lib/python3.10/site-packages/calculate-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/calculate/calculate.egg-info to /workspace/install/calculate/lib/python3.10/site-packages/calculate-0.0.0-py3.10.egg-info
+running install_scripts
+Installing calculate script to /workspace/install/calculate/lib/calculate
+writing list of installed files to '/workspace/build/calculate/install.log'

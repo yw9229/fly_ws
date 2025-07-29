@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/calculate/calculate.egg-info
+writing ../../build/calculate/calculate.egg-info/PKG-INFO
+writing dependency_links to ../../build/calculate/calculate.egg-info/dependency_links.txt
+writing entry points to ../../build/calculate/calculate.egg-info/entry_points.txt
+writing requirements to ../../build/calculate/calculate.egg-info/requires.txt
+writing top-level names to ../../build/calculate/calculate.egg-info/top_level.txt
+writing manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+reading manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+writing manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/build/calculate/build
+creating /workspace/build/calculate/build/lib
+creating /workspace/build/calculate/build/lib/calculate
+copying calculate/__init__.py -> /workspace/build/calculate/build/lib/calculate
+copying calculate/calculate.py -> /workspace/build/calculate/build/lib/calculate
+running install
+running install_lib
+creating /workspace/install/calculate/lib/python3.10/site-packages/calculate
+copying /workspace/build/calculate/build/lib/calculate/__init__.py -> /workspace/install/calculate/lib/python3.10/site-packages/calculate
+copying /workspace/build/calculate/build/lib/calculate/calculate.py -> /workspace/install/calculate/lib/python3.10/site-packages/calculate
+byte-compiling /workspace/install/calculate/lib/python3.10/site-packages/calculate/__init__.py to __init__.cpython-310.pyc
+byte-compiling /workspace/install/calculate/lib/python3.10/site-packages/calculate/calculate.py to calculate.cpython-310.pyc
+running install_data
+creating /workspace/install/calculate/share/ament_index
+creating /workspace/install/calculate/share/ament_index/resource_index
+creating /workspace/install/calculate/share/ament_index/resource_index/packages
+copying resource/calculate -> /workspace/install/calculate/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/install/calculate/share/calculate
+running install_egg_info
+Copying ../../build/calculate/calculate.egg-info to /workspace/install/calculate/lib/python3.10/site-packages/calculate-0.0.0-py3.10.egg-info
+running install_scripts
+Installing calculate script to /workspace/install/calculate/lib/calculate
+writing list of installed files to '/workspace/build/calculate/install.log'

@@ -1,0 +1,21 @@
+[0.938s] Invoking command in '/workspace/src/camera': PYTHONPATH=/workspace/build/camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera build --build-base /workspace/build/camera/build install --record /workspace/build/camera/install.log --single-version-externally-managed install_data
+[1.071s] running egg_info
+[1.072s] writing ../../build/camera/camera.egg-info/PKG-INFO
+[1.072s] writing dependency_links to ../../build/camera/camera.egg-info/dependency_links.txt
+[1.072s] writing entry points to ../../build/camera/camera.egg-info/entry_points.txt
+[1.072s] writing requirements to ../../build/camera/camera.egg-info/requires.txt
+[1.072s] writing top-level names to ../../build/camera/camera.egg-info/top_level.txt
+[1.073s] reading manifest file '../../build/camera/camera.egg-info/SOURCES.txt'
+[1.074s] writing manifest file '../../build/camera/camera.egg-info/SOURCES.txt'
+[1.074s] running build
+[1.074s] running build_py
+[1.074s] running install
+[1.074s] running install_lib
+[1.075s] running install_data
+[1.075s] running install_egg_info
+[1.075s] removing '/workspace/install/camera/lib/python3.10/site-packages/camera-0.0.0-py3.10.egg-info' (and everything under it)
+[1.075s] Copying ../../build/camera/camera.egg-info to /workspace/install/camera/lib/python3.10/site-packages/camera-0.0.0-py3.10.egg-info
+[1.075s] running install_scripts
+[1.089s] Installing usb_camera script to /workspace/install/camera/lib/camera
+[1.090s] writing list of installed files to '/workspace/build/camera/install.log'
+[1.130s] Invoked command in '/workspace/src/camera' returned '0': PYTHONPATH=/workspace/build/camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera build --build-base /workspace/build/camera/build install --record /workspace/build/camera/install.log --single-version-externally-managed install_data

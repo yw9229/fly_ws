@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/gps/gps.egg-info
+writing ../../build/gps/gps.egg-info/PKG-INFO
+writing dependency_links to ../../build/gps/gps.egg-info/dependency_links.txt
+writing entry points to ../../build/gps/gps.egg-info/entry_points.txt
+writing requirements to ../../build/gps/gps.egg-info/requires.txt
+writing top-level names to ../../build/gps/gps.egg-info/top_level.txt
+writing manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+reading manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+writing manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/build/gps/build
+creating /workspace/build/gps/build/lib
+creating /workspace/build/gps/build/lib/gps
+copying gps/__init__.py -> /workspace/build/gps/build/lib/gps
+copying gps/gps_simulator.py -> /workspace/build/gps/build/lib/gps
+copying gps/gps_info.py -> /workspace/build/gps/build/lib/gps
+running install
+running install_lib
+creating /workspace/install/gps/lib/python3.10/site-packages/gps
+copying /workspace/build/gps/build/lib/gps/__init__.py -> /workspace/install/gps/lib/python3.10/site-packages/gps
+copying /workspace/build/gps/build/lib/gps/gps_simulator.py -> /workspace/install/gps/lib/python3.10/site-packages/gps
+copying /workspace/build/gps/build/lib/gps/gps_info.py -> /workspace/install/gps/lib/python3.10/site-packages/gps
+byte-compiling /workspace/install/gps/lib/python3.10/site-packages/gps/__init__.py to __init__.cpython-310.pyc
+byte-compiling /workspace/install/gps/lib/python3.10/site-packages/gps/gps_simulator.py to gps_simulator.cpython-310.pyc
+byte-compiling /workspace/install/gps/lib/python3.10/site-packages/gps/gps_info.py to gps_info.cpython-310.pyc
+running install_data
+creating /workspace/install/gps/share/ament_index
+creating /workspace/install/gps/share/ament_index/resource_index
+creating /workspace/install/gps/share/ament_index/resource_index/packages
+copying resource/gps -> /workspace/install/gps/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/install/gps/share/gps
+running install_egg_info
+Copying ../../build/gps/gps.egg-info to /workspace/install/gps/lib/python3.10/site-packages/gps-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gps script to /workspace/install/gps/lib/gps
+Installing simulator script to /workspace/install/gps/lib/gps
+writing list of installed files to '/workspace/build/gps/install.log'

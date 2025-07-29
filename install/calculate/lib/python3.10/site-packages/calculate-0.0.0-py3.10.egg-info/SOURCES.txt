@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/calculate/calculate.egg-info/PKG-INFO
+../../build/calculate/calculate.egg-info/SOURCES.txt
+../../build/calculate/calculate.egg-info/dependency_links.txt
+../../build/calculate/calculate.egg-info/entry_points.txt
+../../build/calculate/calculate.egg-info/requires.txt
+../../build/calculate/calculate.egg-info/top_level.txt
+../../build/calculate/calculate.egg-info/zip-safe
+calculate/__init__.py
+calculate/calculate.py
+resource/calculate
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

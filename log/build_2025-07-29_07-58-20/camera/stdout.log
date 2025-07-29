@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/camera/camera.egg-info/PKG-INFO
+writing dependency_links to ../../build/camera/camera.egg-info/dependency_links.txt
+writing entry points to ../../build/camera/camera.egg-info/entry_points.txt
+writing requirements to ../../build/camera/camera.egg-info/requires.txt
+writing top-level names to ../../build/camera/camera.egg-info/top_level.txt
+reading manifest file '../../build/camera/camera.egg-info/SOURCES.txt'
+writing manifest file '../../build/camera/camera.egg-info/SOURCES.txt'
+running build
+running build_py
+copying camera/usb_camera.py -> /workspace/build/camera/build/lib/camera
+running install
+running install_lib
+copying /workspace/build/camera/build/lib/camera/usb_camera.py -> /workspace/install/camera/lib/python3.10/site-packages/camera
+byte-compiling /workspace/install/camera/lib/python3.10/site-packages/camera/usb_camera.py to usb_camera.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/workspace/install/camera/lib/python3.10/site-packages/camera-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/camera/camera.egg-info to /workspace/install/camera/lib/python3.10/site-packages/camera-0.0.0-py3.10.egg-info
+running install_scripts
+Installing usb_camera script to /workspace/install/camera/lib/camera
+writing list of installed files to '/workspace/build/camera/install.log'

@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'gps = gps.gps_info:main'
+            'gps = gps.gps_info:main',
+            'simulator = gps.gps_simulator:main',
         ],
     },
 )

@@ -1,0 +1,21 @@
+[1.104s] Invoking command in '/workspace/src/calculate': PYTHONPATH=/workspace/build/calculate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/calculate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/calculate build --build-base /workspace/build/calculate/build install --record /workspace/build/calculate/install.log --single-version-externally-managed install_data
+[1.283s] running egg_info
+[1.283s] writing ../../build/calculate/calculate.egg-info/PKG-INFO
+[1.284s] writing dependency_links to ../../build/calculate/calculate.egg-info/dependency_links.txt
+[1.284s] writing entry points to ../../build/calculate/calculate.egg-info/entry_points.txt
+[1.284s] writing requirements to ../../build/calculate/calculate.egg-info/requires.txt
+[1.284s] writing top-level names to ../../build/calculate/calculate.egg-info/top_level.txt
+[1.285s] reading manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+[1.286s] writing manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+[1.286s] running build
+[1.286s] running build_py
+[1.286s] running install
+[1.287s] running install_lib
+[1.288s] running install_data
+[1.288s] running install_egg_info
+[1.289s] removing '/workspace/install/calculate/lib/python3.10/site-packages/calculate-0.0.0-py3.10.egg-info' (and everything under it)
+[1.289s] Copying ../../build/calculate/calculate.egg-info to /workspace/install/calculate/lib/python3.10/site-packages/calculate-0.0.0-py3.10.egg-info
+[1.290s] running install_scripts
+[1.311s] Installing calculate script to /workspace/install/calculate/lib/calculate
+[1.312s] writing list of installed files to '/workspace/build/calculate/install.log'
+[1.354s] Invoked command in '/workspace/src/calculate' returned '0': PYTHONPATH=/workspace/build/calculate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/calculate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/calculate build --build-base /workspace/build/calculate/build install --record /workspace/build/calculate/install.log --single-version-externally-managed install_data

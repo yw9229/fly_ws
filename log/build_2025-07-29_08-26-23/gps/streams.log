@@ -1,0 +1,25 @@
+[1.718s] Invoking command in '/workspace/src/gps': PYTHONPATH=/workspace/build/gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/gps/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps build --build-base /workspace/build/gps/build install --record /workspace/build/gps/install.log --single-version-externally-managed install_data
+[2.036s] running egg_info
+[2.036s] writing ../../build/gps/gps.egg-info/PKG-INFO
+[2.036s] writing dependency_links to ../../build/gps/gps.egg-info/dependency_links.txt
+[2.037s] writing entry points to ../../build/gps/gps.egg-info/entry_points.txt
+[2.037s] writing requirements to ../../build/gps/gps.egg-info/requires.txt
+[2.037s] writing top-level names to ../../build/gps/gps.egg-info/top_level.txt
+[2.039s] reading manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+[2.040s] writing manifest file '../../build/gps/gps.egg-info/SOURCES.txt'
+[2.041s] running build
+[2.041s] running build_py
+[2.041s] copying gps/gps_info.py -> /workspace/build/gps/build/lib/gps
+[2.041s] running install
+[2.042s] running install_lib
+[2.043s] copying /workspace/build/gps/build/lib/gps/gps_info.py -> /workspace/install/gps/lib/python3.10/site-packages/gps
+[2.044s] byte-compiling /workspace/install/gps/lib/python3.10/site-packages/gps/gps_info.py to gps_info.cpython-310.pyc
+[2.045s] running install_data
+[2.045s] running install_egg_info
+[2.048s] removing '/workspace/install/gps/lib/python3.10/site-packages/gps-0.0.0-py3.10.egg-info' (and everything under it)
+[2.048s] Copying ../../build/gps/gps.egg-info to /workspace/install/gps/lib/python3.10/site-packages/gps-0.0.0-py3.10.egg-info
+[2.049s] running install_scripts
+[2.088s] Installing gps script to /workspace/install/gps/lib/gps
+[2.088s] Installing simulator script to /workspace/install/gps/lib/gps
+[2.088s] writing list of installed files to '/workspace/build/gps/install.log'
+[2.160s] Invoked command in '/workspace/src/gps' returned '0': PYTHONPATH=/workspace/build/gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/gps/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps build --build-base /workspace/build/gps/build install --record /workspace/build/gps/install.log --single-version-externally-managed install_data

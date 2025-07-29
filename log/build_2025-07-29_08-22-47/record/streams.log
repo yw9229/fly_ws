@@ -1,0 +1,21 @@
+[1.734s] Invoking command in '/workspace/src/record': PYTHONPATH=/workspace/build/record/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/record/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/record build --build-base /workspace/build/record/build install --record /workspace/build/record/install.log --single-version-externally-managed install_data
+[2.019s] running egg_info
+[2.020s] writing ../../build/record/record.egg-info/PKG-INFO
+[2.020s] writing dependency_links to ../../build/record/record.egg-info/dependency_links.txt
+[2.021s] writing entry points to ../../build/record/record.egg-info/entry_points.txt
+[2.021s] writing requirements to ../../build/record/record.egg-info/requires.txt
+[2.021s] writing top-level names to ../../build/record/record.egg-info/top_level.txt
+[2.023s] reading manifest file '../../build/record/record.egg-info/SOURCES.txt'
+[2.024s] writing manifest file '../../build/record/record.egg-info/SOURCES.txt'
+[2.024s] running build
+[2.024s] running build_py
+[2.024s] running install
+[2.025s] running install_lib
+[2.026s] running install_data
+[2.027s] running install_egg_info
+[2.029s] removing '/workspace/install/record/lib/python3.10/site-packages/record-0.0.0-py3.10.egg-info' (and everything under it)
+[2.029s] Copying ../../build/record/record.egg-info to /workspace/install/record/lib/python3.10/site-packages/record-0.0.0-py3.10.egg-info
+[2.030s] running install_scripts
+[2.062s] Installing record script to /workspace/install/record/lib/record
+[2.062s] writing list of installed files to '/workspace/build/record/install.log'
+[2.141s] Invoked command in '/workspace/src/record' returned '0': PYTHONPATH=/workspace/build/record/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/record/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/record build --build-base /workspace/build/record/build install --record /workspace/build/record/install.log --single-version-externally-managed install_data

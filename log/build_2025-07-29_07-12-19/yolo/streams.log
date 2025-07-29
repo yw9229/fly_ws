@@ -1,0 +1,21 @@
+[0.932s] Invoking command in '/workspace/src/yolo': PYTHONPATH=/workspace/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /workspace/build/yolo/build install --record /workspace/build/yolo/install.log --single-version-externally-managed install_data
+[1.061s] running egg_info
+[1.061s] writing ../../build/yolo/yolo.egg-info/PKG-INFO
+[1.061s] writing dependency_links to ../../build/yolo/yolo.egg-info/dependency_links.txt
+[1.062s] writing entry points to ../../build/yolo/yolo.egg-info/entry_points.txt
+[1.062s] writing requirements to ../../build/yolo/yolo.egg-info/requires.txt
+[1.062s] writing top-level names to ../../build/yolo/yolo.egg-info/top_level.txt
+[1.063s] reading manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.063s] writing manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.063s] running build
+[1.063s] running build_py
+[1.064s] running install
+[1.064s] running install_lib
+[1.066s] running install_data
+[1.066s] running install_egg_info
+[1.066s] removing '/workspace/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info' (and everything under it)
+[1.067s] Copying ../../build/yolo/yolo.egg-info to /workspace/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info
+[1.067s] running install_scripts
+[1.080s] Installing yolo script to /workspace/install/yolo/lib/yolo
+[1.080s] writing list of installed files to '/workspace/build/yolo/install.log'
+[1.115s] Invoked command in '/workspace/src/yolo' returned '0': PYTHONPATH=/workspace/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /workspace/build/yolo/build install --record /workspace/build/yolo/install.log --single-version-externally-managed install_data

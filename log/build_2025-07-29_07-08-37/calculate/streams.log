@@ -1,0 +1,37 @@
+[1.170s] Invoking command in '/workspace/src/calculate': PYTHONPATH=/workspace/build/calculate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/calculate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/calculate build --build-base /workspace/build/calculate/build install --record /workspace/build/calculate/install.log --single-version-externally-managed install_data
+[1.304s] running egg_info
+[1.304s] creating ../../build/calculate/calculate.egg-info
+[1.304s] writing ../../build/calculate/calculate.egg-info/PKG-INFO
+[1.304s] writing dependency_links to ../../build/calculate/calculate.egg-info/dependency_links.txt
+[1.304s] writing entry points to ../../build/calculate/calculate.egg-info/entry_points.txt
+[1.305s] writing requirements to ../../build/calculate/calculate.egg-info/requires.txt
+[1.305s] writing top-level names to ../../build/calculate/calculate.egg-info/top_level.txt
+[1.305s] writing manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+[1.307s] reading manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+[1.308s] writing manifest file '../../build/calculate/calculate.egg-info/SOURCES.txt'
+[1.308s] running build
+[1.308s] running build_py
+[1.308s] creating /workspace/build/calculate/build
+[1.308s] creating /workspace/build/calculate/build/lib
+[1.308s] creating /workspace/build/calculate/build/lib/calculate
+[1.308s] copying calculate/__init__.py -> /workspace/build/calculate/build/lib/calculate
+[1.308s] copying calculate/calculate.py -> /workspace/build/calculate/build/lib/calculate
+[1.308s] running install
+[1.308s] running install_lib
+[1.309s] creating /workspace/install/calculate/lib/python3.10/site-packages/calculate
+[1.309s] copying /workspace/build/calculate/build/lib/calculate/__init__.py -> /workspace/install/calculate/lib/python3.10/site-packages/calculate
+[1.309s] copying /workspace/build/calculate/build/lib/calculate/calculate.py -> /workspace/install/calculate/lib/python3.10/site-packages/calculate
+[1.309s] byte-compiling /workspace/install/calculate/lib/python3.10/site-packages/calculate/__init__.py to __init__.cpython-310.pyc
+[1.309s] byte-compiling /workspace/install/calculate/lib/python3.10/site-packages/calculate/calculate.py to calculate.cpython-310.pyc
+[1.310s] running install_data
+[1.310s] creating /workspace/install/calculate/share/ament_index
+[1.310s] creating /workspace/install/calculate/share/ament_index/resource_index
+[1.310s] creating /workspace/install/calculate/share/ament_index/resource_index/packages
+[1.310s] copying resource/calculate -> /workspace/install/calculate/share/ament_index/resource_index/packages
+[1.310s] copying package.xml -> /workspace/install/calculate/share/calculate
+[1.310s] running install_egg_info
+[1.311s] Copying ../../build/calculate/calculate.egg-info to /workspace/install/calculate/lib/python3.10/site-packages/calculate-0.0.0-py3.10.egg-info
+[1.311s] running install_scripts
+[1.323s] Installing calculate script to /workspace/install/calculate/lib/calculate
+[1.323s] writing list of installed files to '/workspace/build/calculate/install.log'
+[1.385s] Invoked command in '/workspace/src/calculate' returned '0': PYTHONPATH=/workspace/build/calculate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/calculate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/calculate build --build-base /workspace/build/calculate/build install --record /workspace/build/calculate/install.log --single-version-externally-managed install_data

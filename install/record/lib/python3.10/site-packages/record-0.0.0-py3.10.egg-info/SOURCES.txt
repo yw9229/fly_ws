@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/record/record.egg-info/PKG-INFO
+../../build/record/record.egg-info/SOURCES.txt
+../../build/record/record.egg-info/dependency_links.txt
+../../build/record/record.egg-info/entry_points.txt
+../../build/record/record.egg-info/requires.txt
+../../build/record/record.egg-info/top_level.txt
+../../build/record/record.egg-info/zip-safe
+record/__init__.py
+record/record.py
+resource/record
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

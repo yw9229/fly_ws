@@ -1,35 +1,41 @@
 # Use the specified base image
 FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
 
+
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH=/usr/local/bin:$PATH
 
+
 # ================= Basic System Setup ======================
 # Update the system and install essential tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    curl \
-    wget \
-    git \
-    vim nano \
-    ca-certificates \
-    libssl-dev \
-    libffi-dev \
-    tmux \
-    sudo \
-    usbutils \
-    bash-completion \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+   build-essential \
+   curl \
+   wget \
+   git \
+   vim nano \
+   ca-certificates \
+   libssl-dev \
+   libffi-dev \
+   tmux \
+   sudo \
+   usbutils \
+   bash-completion \
+   && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Ensure the `python` command points to `python3`
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 \
-    python3-pip \
-    python3-dev \
-    && ln -s /usr/bin/python3 /usr/bin/python \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+   python3 \
+   python3-pip \
+   python3-dev \
+   && ln -s /usr/bin/python3 /usr/bin/python \
+   && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+
+
 
 
 
@@ -37,23 +43,35 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Create a non-root user 'work'
 RUN useradd -ms /bin/bash work
 
+
 # Grant sudo privileges to the 'work' user
 RUN echo "work ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
+
 # Set a custom hostname
 RUN echo "aa" > /etc/hostname
+
 
 # Set the working directory and give permissions to the 'work' user
 RUN mkdir -p /workspace && chown work:work /workspace
 WORKDIR /workspace
 
 
+
+
 # ================= Custom Shell Environment ======================
 # Customize PS1 prompt to make it more noticeable
 RUN echo "PS1='\[\033[1;31m\]\u@\[\033[1;34m\]\h\[\033[0m\]:\[\033[1;33m\]\w\[\033[0m\]\$ '" >> /home/work/.bashrc
 
+
 # Enable bash-completion
 RUN echo "source /usr/share/bash-completion/bash_completion" >> /home/work/.bashrc
+
+
+
+
+
+
 
 
 
@@ -64,50 +82,74 @@ RUN echo "source /usr/share/bash-completion/bash_completion" >> /home/work/.bash
 USER root
 
 
+
+
 # ================= Upgrade Tools and Install Python ======================
 # Upgrade pip
 RUN python -m pip install --upgrade pip
 
 
+
+
 # ================= Install ROS 2 Humble ======================
 # Enable Ubuntu Universe repository
 RUN apt-get update && apt-get install -y software-properties-common && \
-    add-apt-repository universe && \
-    apt-get update
+   add-apt-repository universe && \
+   apt-get update
+
 
 # Add the ROS 2 GPG key
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
+
 # Add the ROS 2 repository
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
 
 # Update package index and install ROS 2 Humble
 RUN apt-get update && apt-get install -y ros-humble-desktop
 
+
 # Source ROS 2 setup script
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/work/.bashrc
+RUN echo "export ROS_DOMAIN_ID=10" >> /home/work/.bashrc
+
 
 # Install colcon
 RUN apt-get update && apt-get install -y python3-colcon-common-extensions
+
+
+RUN apt-get update && apt-get install -y ros-humble-vision-msgs
 
 
 # ================= Install Image Tool ======================
 RUN pip install numpy==1.26.4
 RUN pip install opencv-python==4.10.0.84
 
-# RUN apt-get remove -y python3-sympy
-# RUN pip install ultralytics
 
+RUN apt-get remove -y python3-sympy
+RUN pip install ultralytics
+RUN pip install pyserial
 # Extra features of opencv
 # pip3 install opencv-contrib-python
 
 
+
+
 # ================= Camera Tool ======================
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    v4l-utils \
-    ffmpeg \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+   v4l-utils \
+   ffmpeg \
+   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+
+
+
+
+
+# ================= ByteTrack ======================
+RUN pip install cython_bbox==0.1.5
+RUN pip install lap==0.5.12
 
 
 # ================= Copy tmux Configuration ======================
@@ -115,19 +157,28 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY tmux.conf /root/.tmux.conf
 COPY tmux.conf /home/work/.tmux.conf
 
+
 # Enable tmux to start automatically for both root and work users
 # RUN echo '[ -z "$TMUX" ] && tmux' >> /home/work/.bashrc
 RUN echo "if command -v tmux &> /dev/null; then" >> /home/work/.bashrc && \
-    echo "  tmux ls &> /dev/null || true" >> /home/work/.bashrc && \
-    echo "fi" >> /home/work/.bashrc
+   echo "  tmux ls &> /dev/null || true" >> /home/work/.bashrc && \
+   echo "fi" >> /home/work/.bashrc
 
 
 
 
+
+
+RUN apt update && apt install -y terminator byobu
 # ================= Finalize Container Configuration ======================
 # Switch back to non-root user
 USER work
 
 
+
+
 # Default container startup command (modify as needed)
-CMD ["bash"]
+# CMD ["bash"]
+CMD ["terminator"]
+# CMD ["byobu"]
+

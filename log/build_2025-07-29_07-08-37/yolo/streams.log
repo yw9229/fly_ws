@@ -1,0 +1,43 @@
+[1.149s] Invoking command in '/workspace/src/yolo': PYTHONPATH=/workspace/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /workspace/build/yolo/build install --record /workspace/build/yolo/install.log --single-version-externally-managed install_data
+[1.275s] running egg_info
+[1.276s] creating ../../build/yolo/yolo.egg-info
+[1.277s] writing ../../build/yolo/yolo.egg-info/PKG-INFO
+[1.277s] writing dependency_links to ../../build/yolo/yolo.egg-info/dependency_links.txt
+[1.277s] writing entry points to ../../build/yolo/yolo.egg-info/entry_points.txt
+[1.277s] writing requirements to ../../build/yolo/yolo.egg-info/requires.txt
+[1.277s] writing top-level names to ../../build/yolo/yolo.egg-info/top_level.txt
+[1.277s] writing manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.278s] reading manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.278s] writing manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[1.279s] running build
+[1.279s] running build_py
+[1.279s] creating /workspace/build/yolo/build
+[1.279s] creating /workspace/build/yolo/build/lib
+[1.279s] creating /workspace/build/yolo/build/lib/yolo
+[1.279s] copying yolo/__init__.py -> /workspace/build/yolo/build/lib/yolo
+[1.279s] copying yolo/bytetrack.py -> /workspace/build/yolo/build/lib/yolo
+[1.279s] copying yolo/person_detection_python.py -> /workspace/build/yolo/build/lib/yolo
+[1.279s] copying yolo/human_detect.py -> /workspace/build/yolo/build/lib/yolo
+[1.279s] running install
+[1.279s] running install_lib
+[1.280s] creating /workspace/install/yolo/lib/python3.10/site-packages/yolo
+[1.280s] copying /workspace/build/yolo/build/lib/yolo/__init__.py -> /workspace/install/yolo/lib/python3.10/site-packages/yolo
+[1.280s] copying /workspace/build/yolo/build/lib/yolo/bytetrack.py -> /workspace/install/yolo/lib/python3.10/site-packages/yolo
+[1.280s] copying /workspace/build/yolo/build/lib/yolo/person_detection_python.py -> /workspace/install/yolo/lib/python3.10/site-packages/yolo
+[1.280s] copying /workspace/build/yolo/build/lib/yolo/human_detect.py -> /workspace/install/yolo/lib/python3.10/site-packages/yolo
+[1.280s] byte-compiling /workspace/install/yolo/lib/python3.10/site-packages/yolo/__init__.py to __init__.cpython-310.pyc
+[1.280s] byte-compiling /workspace/install/yolo/lib/python3.10/site-packages/yolo/bytetrack.py to bytetrack.cpython-310.pyc
+[1.280s] byte-compiling /workspace/install/yolo/lib/python3.10/site-packages/yolo/person_detection_python.py to person_detection_python.cpython-310.pyc
+[1.280s] byte-compiling /workspace/install/yolo/lib/python3.10/site-packages/yolo/human_detect.py to human_detect.cpython-310.pyc
+[1.280s] running install_data
+[1.280s] creating /workspace/install/yolo/share/ament_index
+[1.280s] creating /workspace/install/yolo/share/ament_index/resource_index
+[1.280s] creating /workspace/install/yolo/share/ament_index/resource_index/packages
+[1.280s] copying resource/yolo -> /workspace/install/yolo/share/ament_index/resource_index/packages
+[1.280s] copying package.xml -> /workspace/install/yolo/share/yolo
+[1.280s] running install_egg_info
+[1.281s] Copying ../../build/yolo/yolo.egg-info to /workspace/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info
+[1.281s] running install_scripts
+[1.294s] Installing yolo script to /workspace/install/yolo/lib/yolo
+[1.295s] writing list of installed files to '/workspace/build/yolo/install.log'
+[1.350s] Invoked command in '/workspace/src/yolo' returned '0': PYTHONPATH=/workspace/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /workspace/build/yolo/build install --record /workspace/build/yolo/install.log --single-version-externally-managed install_data

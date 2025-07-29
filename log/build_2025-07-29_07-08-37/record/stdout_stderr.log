@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/record/record.egg-info
+writing ../../build/record/record.egg-info/PKG-INFO
+writing dependency_links to ../../build/record/record.egg-info/dependency_links.txt
+writing entry points to ../../build/record/record.egg-info/entry_points.txt
+writing requirements to ../../build/record/record.egg-info/requires.txt
+writing top-level names to ../../build/record/record.egg-info/top_level.txt
+writing manifest file '../../build/record/record.egg-info/SOURCES.txt'
+reading manifest file '../../build/record/record.egg-info/SOURCES.txt'
+writing manifest file '../../build/record/record.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/build/record/build
+creating /workspace/build/record/build/lib
+creating /workspace/build/record/build/lib/record
+copying record/__init__.py -> /workspace/build/record/build/lib/record
+copying record/record.py -> /workspace/build/record/build/lib/record
+running install
+running install_lib
+creating /workspace/install/record/lib/python3.10/site-packages/record
+copying /workspace/build/record/build/lib/record/__init__.py -> /workspace/install/record/lib/python3.10/site-packages/record
+copying /workspace/build/record/build/lib/record/record.py -> /workspace/install/record/lib/python3.10/site-packages/record
+byte-compiling /workspace/install/record/lib/python3.10/site-packages/record/__init__.py to __init__.cpython-310.pyc
+byte-compiling /workspace/install/record/lib/python3.10/site-packages/record/record.py to record.cpython-310.pyc
+running install_data
+creating /workspace/install/record/share/ament_index
+creating /workspace/install/record/share/ament_index/resource_index
+creating /workspace/install/record/share/ament_index/resource_index/packages
+copying resource/record -> /workspace/install/record/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/install/record/share/record
+running install_egg_info
+Copying ../../build/record/record.egg-info to /workspace/install/record/lib/python3.10/site-packages/record-0.0.0-py3.10.egg-info
+running install_scripts
+Installing record script to /workspace/install/record/lib/record
+writing list of installed files to '/workspace/build/record/install.log'

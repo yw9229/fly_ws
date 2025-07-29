@@ -1,0 +1,4 @@
+[console_scripts]
+gps = gps.gps_info:main
+simulator = gps.gps_simulator:main
+
